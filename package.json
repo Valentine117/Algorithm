@@ -7,9 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "eslint": "^9.1.1",
-    "prettier": "^3.2.5"
-  }
+  "license": "ISC"
 }

@@ -10,19 +10,27 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-function ListNodeToArray(listNode) {
+function ListNodeToString(listNode) {
   const arr = [];
-  while(listNode !== null) {
-    arr.push(listNode.val);
+  while (listNode !== null) {
+    arr.unshift(listNode.val);
     listNode = listNode.next;
   }
-  return arr;
+  return arr.join();
 }
-var addTwoNumbers = function(l1, l2) {
-  const {l1Arr, l2Arr} = {l1Arr: ListNodeToArray(l1), l2Arr: ListNodeToArray(l2)};
-  const answerArr = ((Number(l1Arr.join()) + Number(l2Arr.join())) + "").split().reverse();
-  for(let i = 0; i< answerArr.length; i++) {
-
+var addTwoNumbers = function (l1, l2) {
+  const answerArr = (
+    Number(ListNodeToString(l1)) +
+    Number(ListNodeToString(l2)) +
+    ''
+  )
+    .split('')
+    .reverse()
+    .map((i) => Number(i));
+  const answerListNode = new ListNode();
+  let index = 0;
+  while (index < answerArr.length) {
+    answerListNode(answerArr[index], answerArr[++index]);
   }
-  return answerArr;
+  return answerListNode;
 };

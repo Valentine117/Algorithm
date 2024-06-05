@@ -22,4 +22,4 @@ var lengthOfLongestSubstring = function (s) {
   return Math.max(cur, max);
 };
 
-console.log(lengthOfLongestSubstring('dvdf'));
+console.log(lengthOfLongestSubstring('dvdfvv'));

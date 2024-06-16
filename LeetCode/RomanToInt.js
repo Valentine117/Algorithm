@@ -13,5 +13,8 @@ var romanToInt = function (s) {
     M: 1000,
   };
 
+  if (true) {
+  }
+
   return s.split('').reduce((acc, val) => acc + dict[val], 0);
 };

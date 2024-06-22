@@ -13,8 +13,11 @@ var romanToInt = function (s) {
     M: 1000,
   };
 
-  if (true) {
-  }
-
-  return s.split('').reduce((acc, val) => acc + dict[val], 0);
+  return s.split('').reduce((acc, val, idx) => {
+    if (idx + 1 < s.length)
+      return dict[s.charAt(idx)] < dict[s.charAt(idx + 1)]
+        ? acc - dict[val]
+        : acc + dict[val];
+    return acc + dict[val];
+  }, 0);
 };

@@ -13,6 +13,8 @@ var romanToInt = function (s) {
     M: 1000,
   };
 
+  //TODO
+
   return s.split('').reduce((acc, val, idx) => {
     if (idx + 1 < s.length)
       return dict[s.charAt(idx)] < dict[s.charAt(idx + 1)]

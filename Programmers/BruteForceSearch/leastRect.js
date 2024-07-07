@@ -5,7 +5,6 @@ function solution(sizes) {
   );
 }
 
-//TODO
 console.log(
   solution([
     [60, 50],
